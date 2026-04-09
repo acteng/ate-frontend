@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "description": "ATE templates and styles for the web."
+  },
+  "pluginDependencies": [
+    {
+      "packageName": "govuk-frontend",
+      "minVersion": "6.1.0"
+    }
+  ],
+  "assets": [
+    "/src/ate/assets/"
+  ],
+  "nunjucksPaths": [
+    "/src/"
+  ],
+  "nunjucksMacros": [
+    {
+      "macroName": "ateHeader",
+      "importFrom": "ate/components/ate-header/macro.njk"
+    }
+  ],
+  "sass": [
+    "/src/ate/index.scss"
+  ]
+}

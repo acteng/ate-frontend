@@ -1,0 +1,20 @@
+.ate-header__logotype,
+.ate-header__logotype--focus {
+  height: 30px;
+}
+
+.ate-header__logotype--focus {
+  display: none;
+}
+
+.govuk-header__homepage-link {
+  &:focus {
+    .ate-header__logotype {
+      display: none;
+    }
+
+    .ate-header__logotype--focus {
+      display: inline-block;
+    }
+  }
+}
