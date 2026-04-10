@@ -6,6 +6,10 @@
     {
       "packageName": "govuk-frontend",
       "minVersion": "6.1.0"
+    },
+    {
+      "packageName": "@govuk-one-login/service-header",
+      "minVersion": "5.0.0"
     }
   ],
   "assets": [
@@ -22,6 +26,10 @@
     {
       "macroName": "ateFooter",
       "importFrom": "ate/components/ate-footer/macro.njk"
+    },
+    {
+      "macroName": "ateServiceHeader",
+      "importFrom": "ate/components/ate-service-header/macro.njk"
     }
   ],
   "sass": [

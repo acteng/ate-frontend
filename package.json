@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@govuk-one-login/service-header": "~5.0.0",
     "govuk-frontend": "~6.1.0"
   }
 }

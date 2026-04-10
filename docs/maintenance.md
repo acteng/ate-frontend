@@ -29,7 +29,23 @@ After upgrading GOV.UK Frontend, update the footer template:
 ./src/ate/components/ate-footer/create-template.sh
 ```
 
-### Creating patches
+## Upgrading GOV.UK One Login Service Header
+
+Upgrade GOV.UK One Login Service Header in:
+
+* [package.json](../package.json)
+* [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
+
+GOV.UK One Login Service Header [doesn't allow the crown logo to be customised](https://github.com/govuk-one-login/service-header/issues/40),
+so we maintain a copy of the template to replace it with the ATE logo.
+
+After upgrading GOV.UK One Login Service Header, update the template:
+
+```bash
+./src/ate/components/ate-service-header/create-template.sh
+```
+
+## Creating patches
 
 If there are conflicts when updating components then the patches will need to be recreated.
 
