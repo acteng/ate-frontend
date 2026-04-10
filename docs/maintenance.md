@@ -37,5 +37,8 @@ To create patches for a component:
 
 1. Copy the upstream template and commit
 1. Make a change and commit, repeating as necessary
-1. Create patches from commit (1) using `git format-patch --zero-commit --no-numbered <commit>`
+1. Create patches from commit (1) using:
+   ```bash
+   git format-patch --zero-commit --no-numbered <commit>
+   ```
 1. Reset back to the commit before (1)
