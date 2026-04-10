@@ -18,9 +18,20 @@ After upgrading GOV.UK Frontend, update the header template:
 ./src/ate/components/ate-header/create-template.sh
 ```
 
-If there are conflicts then the patches will need to be recreated.
+### GOV.UK footer component
+
+GOV.UK Frontend [doesn't allow the crown logo to be removed from the footer](https://github.com/alphagov/govuk-frontend/issues/5952),
+so we maintain a copy of the footer template to remove it ourselves.
+
+After upgrading GOV.UK Frontend, update the footer template:
+
+```bash
+./src/ate/components/ate-footer/create-template.sh
+```
 
 ### Creating patches
+
+If there are conflicts when updating components then the patches will need to be recreated.
 
 To create patches for a component:
 

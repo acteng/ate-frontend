@@ -1,0 +1,30 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
+Date: Fri, 10 Apr 2026 12:11:54 +0100
+Subject: [PATCH] Remove crown logo
+
+---
+ src/ate/components/ate-footer/template.njk | 5 -----
+ 1 file changed, 5 deletions(-)
+
+diff --git a/src/ate/components/ate-footer/template.njk b/src/ate/components/ate-footer/template.njk
+index 176309e..85149ce 100644
+--- a/src/ate/components/ate-footer/template.njk
++++ b/src/ate/components/ate-footer/template.njk
+@@ -1,13 +1,8 @@
+ {% from "govuk/macros/attributes.njk" import govukAttributes -%}
+-{% from "govuk/macros/logo.njk" import govukLogo -%}
+ 
+ <div class="govuk-footer {%- if params.classes %} {{ params.classes }}{% endif %}"
+   {{- govukAttributes(params.attributes) }}>
+   <div class="govuk-width-container {%- if params.containerClasses %} {{ params.containerClasses }}{% endif %}">
+-    {{- govukLogo({
+-      classes: 'govuk-footer__crown',
+-      useLogotype: false
+-    }) }}
+     {% if params.navigation | length %}
+       <div class="govuk-footer__navigation">
+         {% for nav in params.navigation %}
+-- 
+2.43.0
+

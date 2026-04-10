@@ -18,6 +18,10 @@
     {
       "macroName": "ateHeader",
       "importFrom": "ate/components/ate-header/macro.njk"
+    },
+    {
+      "macroName": "ateFooter",
+      "importFrom": "ate/components/ate-footer/macro.njk"
     }
   ],
   "sass": [
