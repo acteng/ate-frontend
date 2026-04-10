@@ -14,34 +14,17 @@ so we maintain a copy of the header template to replace it with the ATE logo.
 
 After upgrading GOV.UK Frontend, update the header template:
 
-1. Copy the contents of the [GOV.UK header template](../node_modules/govuk-frontend/dist/govuk/components/header/template.njk)
-   to the [ATE header template](../src/ate/components/ate-header/template.njk) and correct the imports by applying the
-   following patch:
+```bash
+./src/ate/components/ate-header/create-template.sh
+```
 
-   ```diff
-   -{% from "../../macros/attributes.njk" import govukAttributes -%}
-   -{% from "../../macros/logo.njk" import govukLogo -%}
-   +{% from "govuk/macros/attributes.njk" import govukAttributes -%}
-   +{% from "govuk/macros/logo.njk" import govukLogo -%}
-   ```
+If there are conflicts then the patches will need to be recreated.
 
-1. Replace the crown logo with the ATE logo by applying the following patch:
+### Creating patches
 
-   ```diff
-    {% from "govuk/macros/attributes.njk" import govukAttributes -%}
-   -{% from "govuk/macros/logo.njk" import govukLogo -%}
-   
-    <div class="govuk-header {%- if params.classes %} {{ params.classes }}{% endif %}" {{- govukAttributes(params.attributes) }}>
-      <div class="govuk-header__container {{ params.containerClasses | default("govuk-width-container", true) }}">
-        <div class="govuk-header__logo">
-          <a href="{{ params.homepageUrl | default("//gov.uk", true) }}" class="govuk-header__homepage-link">
-   -        {{ govukLogo({
-   -          classes: "govuk-header__logotype",
-   -          ariaLabelText: "GOV.UK"
-   -        }) | trim | indent(8) }}
-   +        <img class="govuk-header__logotype ate-header__logotype" src="{{ params.assetPath }}/ate-header/ATE_Lesser_Arms_Landscape_White.png" alt="Active Travel England"/>
-   +        <img class="govuk-header__logotype ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ATE_Lesser_Arms_Landscape_Black.png" alt="Active Travel England"/>
-            {% if (params.productName) %}
-            <span class="govuk-header__product-name">
-              {{- params.productName -}}
-   ```
+To create patches for a component:
+
+1. Copy the upstream template and commit
+1. Make a change and commit, repeating as necessary
+1. Create patches from commit (1) using `git format-patch --zero-commit --no-numbered <commit>`
+1. Reset back to the commit before (1)

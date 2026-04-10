@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
+Date: Fri, 10 Apr 2026 10:41:09 +0100
+Subject: [PATCH] Replace GOV.UK logo with ATE logo
+
+---
+ src/ate/components/ate-header/template.njk | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/src/ate/components/ate-header/template.njk b/src/ate/components/ate-header/template.njk
+index 4a57d61..ec128cd 100644
+--- a/src/ate/components/ate-header/template.njk
++++ b/src/ate/components/ate-header/template.njk
+@@ -1,14 +1,11 @@
+ {% from "govuk/macros/attributes.njk" import govukAttributes -%}
+-{% from "govuk/macros/logo.njk" import govukLogo -%}
+ 
+ <div class="govuk-header {%- if params.classes %} {{ params.classes }}{% endif %}" {{- govukAttributes(params.attributes) }}>
+   <div class="govuk-header__container {{ params.containerClasses | default("govuk-width-container", true) }}">
+     <div class="govuk-header__logo">
+       <a href="{{ params.homepageUrl | default("//gov.uk", true) }}" class="govuk-header__homepage-link">
+-        {{ govukLogo({
+-          classes: "govuk-header__logotype",
+-          ariaLabelText: "GOV.UK"
+-        }) | trim | indent(8) }}
++        <img class="govuk-header__logotype ate-header__logotype" src="{{ params.assetPath }}/ate-header/ATE_Lesser_Arms_Landscape_White.png" alt="Active Travel England"/>
++        <img class="govuk-header__logotype ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ATE_Lesser_Arms_Landscape_Black.png" alt="Active Travel England"/>
+         {% if (params.productName) %}
+         <span class="govuk-header__product-name">
+           {{- params.productName -}}
+-- 
+2.43.0
+

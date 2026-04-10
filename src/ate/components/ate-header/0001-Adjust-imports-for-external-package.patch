@@ -1,0 +1,24 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
+Date: Fri, 10 Apr 2026 10:40:20 +0100
+Subject: [PATCH] Adjust imports for external package
+
+---
+ src/ate/components/ate-header/template.njk | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/ate/components/ate-header/template.njk b/src/ate/components/ate-header/template.njk
+index 49257c9..4a57d61 100644
+--- a/src/ate/components/ate-header/template.njk
++++ b/src/ate/components/ate-header/template.njk
+@@ -1,5 +1,5 @@
+-{% from "../../macros/attributes.njk" import govukAttributes -%}
+-{% from "../../macros/logo.njk" import govukLogo -%}
++{% from "govuk/macros/attributes.njk" import govukAttributes -%}
++{% from "govuk/macros/logo.njk" import govukLogo -%}
+ 
+ <div class="govuk-header {%- if params.classes %} {{ params.classes }}{% endif %}" {{- govukAttributes(params.attributes) }}>
+   <div class="govuk-header__container {{ params.containerClasses | default("govuk-width-container", true) }}">
+-- 
+2.43.0
+
