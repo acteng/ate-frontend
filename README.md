@@ -64,6 +64,7 @@ Use with the Nunjucks macro and the [GOV.UK One Login service header](https://gi
 The following layouts can be used with the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/):
 
 * `ate/layouts/template.njk` - uses the ATE header and footer
+* `ate/layouts/service-template.njk` - uses the ATE service header and footer
 
 ## See also
 
