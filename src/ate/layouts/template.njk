@@ -1,0 +1,18 @@
+{%- set assetPath = assetPath | default("/plugin-assets/ate-frontend/src/ate/assets") -%}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block govukHeader %}
+    {{ ateHeader({
+        assetPath: assetPath
+    }) }}
+{% endblock %}
+
+{% block govukFooter %}
+    {{ ateFooter({
+        meta: {
+            items: footerItems,
+            visuallyHiddenTitle: "Footer links"
+        }
+    }) }}
+{% endblock %}
