@@ -21,13 +21,19 @@ with the ATE logo.
 
 ![Screenshot of the ATE header](docs/components/ate-header.png)
 
-Use with the Nunjucks macro and the [GOV.UK header](https://design-system.service.gov.uk/components/header/) options:
+Use with the Nunjucks macro:
 
 ```nunjucks
 {% from "ate/components/ate-header/macro.njk" import ateHeader %}
 
 {{ ateHeader({}) }}
 ```
+
+The macro supports all the [GOV.UK header](https://design-system.service.gov.uk/components/header/) options, plus:
+
+| Name        | Type   | Description                                |
+|-------------|--------|--------------------------------------------|
+| `assetPath` | string | Specify a path to the ATE Frontend assets. |
 
 ### ATE footer
 
@@ -36,13 +42,15 @@ logo from the GOV.UK footer.
 
 ![Screenshot of the ATE footer](docs/components/ate-footer.png)
 
-Use with the Nunjucks macro and the [GOV.UK footer](https://design-system.service.gov.uk/components/footer/) options:
+Use with the Nunjucks macro:
 
 ```nunjucks
 {% from "ate/components/ate-footer/macro.njk" import ateFooter %}
 
 {{ ateFooter({}) }}
 ```
+
+The macro supports all the [GOV.UK footer](https://design-system.service.gov.uk/components/footer/) options.
 
 ### ATE service header
 
@@ -51,13 +59,20 @@ GOV.UK One Login service header with the ATE logo.
 
 ![Screenshot of the ATE service header](docs/components/ate-service-header.png)
 
-Use with the Nunjucks macro and the [GOV.UK One Login service header](https://github.com/govuk-one-login/service-header) options:
+Use with the Nunjucks macro:
 
 ```nunjucks
 {% from "ate/components/ate-service-header/macro.njk" import ateServiceHeader %}
 
 {{ ateServiceHeader({}) }}
 ```
+
+The macro supports all the [GOV.UK One Login service header](https://github.com/govuk-one-login/service-header) options,
+plus:
+
+| Name        | Type   | Description                                |
+|-------------|--------|--------------------------------------------|
+| `assetPath` | string | Specify a path to the ATE Frontend assets. |
 
 ## Layouts
 
