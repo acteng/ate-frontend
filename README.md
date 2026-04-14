@@ -74,19 +74,27 @@ plus:
 |-------------|--------|--------------------------------------------|
 | `assetPath` | string | Specify a path to the ATE Frontend assets. |
 
-## Layouts
+## Using with the Prototype Kit
 
-The following layouts can be used with the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/):
+This project can also be used as a plugin for the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/).
+
+### Templates
+
+Templates are used to create pages. This plugin provides the following templates:
+
+* Blank ATE page - uses the ATE header and footer
+* Blank ATE service page - uses the ATE service header and footer
+
+Learn how to [create pages from templates](https://prototype-kit.service.gov.uk/docs/create-pages-from-templates) in a prototype.
+
+### Layouts
+
+Layouts are used to share a common design across pages. This plugin provides the following layouts:
 
 * `ate/layouts/prototype/template.njk` - uses the ATE header and footer
 * `ate/layouts/prototype/service-template.njk` - uses the ATE service header and footer
 
-## Templates
-
-The following templates can be used with the GOV.UK Prototype Kit:
-
-* Blank ATE page - uses the ATE header and footer
-* Blank ATE service page - uses the ATE service header and footer
+Learn [how to use layouts](https://prototype-kit.service.gov.uk/docs/how-to-use-layouts) in a prototype.
 
 ## See also
 
