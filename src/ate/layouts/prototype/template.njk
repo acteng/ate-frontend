@@ -2,6 +2,10 @@
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
+{% block headIcons %}
+    <link rel="icon" sizes="any" href="{{ assetPath }}/ate-icons/favicon.svg" type="image/svg+xml">
+{% endblock %}
+
 {% block govukHeader %}
     {{ ateHeader({
         assetPath: assetPath

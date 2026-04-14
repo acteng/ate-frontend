@@ -7,6 +7,16 @@ Upgrade GOV.UK Frontend in:
 * [package.json](../package.json)
 * [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
 
+### Icons
+
+We derive the ATE icons from the GOV.UK icons.
+
+Update the icons after upgrading GOV.UK Frontend:
+
+```bash
+./src/ate/assets/ate-icons/create-icons.sh
+```
+
 ### Templates
 
 We derive the following templates from GOV.UK Frontend:
