@@ -66,6 +66,12 @@ The following layouts can be used with the [GOV.UK Prototype Kit](https://protot
 * `ate/layouts/prototype/template.njk` - uses the ATE header and footer
 * `ate/layouts/prototype/service-template.njk` - uses the ATE service header and footer
 
+## Templates
+
+The following templates can be used with the GOV.UK Prototype Kit:
+
+* Blank ATE page - uses the ATE header and footer
+
 ## See also
 
 * [Maintenance](docs/maintenance.md)

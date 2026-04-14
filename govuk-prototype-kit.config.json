@@ -34,5 +34,12 @@
   ],
   "sass": [
     "/src/ate/index.scss"
+  ],
+  "templates": [
+    {
+      "name": "Blank ATE page",
+      "path": "/src/ate/templates/blank-ate.njk",
+      "type": "nunjucks"
+    }
   ]
 }
