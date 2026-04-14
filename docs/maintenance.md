@@ -41,9 +41,9 @@ To apply our patches to the upstream templates:
 
 ## Creating patches
 
-If there are conflicts when updating components then the patches will need to be recreated.
+If there are conflicts when updating templates then the patches will need to be recreated.
 
-To create patches for a component:
+To create patches for a template:
 
 1. Copy the upstream template and commit
 1. Make a change and commit, repeating as necessary
