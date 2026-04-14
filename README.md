@@ -71,6 +71,7 @@ The following layouts can be used with the [GOV.UK Prototype Kit](https://protot
 The following templates can be used with the GOV.UK Prototype Kit:
 
 * Blank ATE page - uses the ATE header and footer
+* Blank ATE service page - uses the ATE service header and footer
 
 ## See also
 
