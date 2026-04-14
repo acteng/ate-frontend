@@ -7,6 +7,8 @@ Upgrade GOV.UK Frontend in:
 * [package.json](../package.json)
 * [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
 
+### Templates
+
 We derive the following templates from GOV.UK Frontend:
 
 * ATE header component - the [crown cannot be changed](https://github.com/alphagov/govuk-frontend/issues/1639) in the
@@ -22,6 +24,8 @@ Upgrade GOV.UK One Login Service Header in:
 
 * [package.json](../package.json)
 * [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
+
+### Templates
 
 We derive the following templates from GOV.UK One Login Service Header:
 
