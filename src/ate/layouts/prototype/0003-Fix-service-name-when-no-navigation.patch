@@ -1,16 +1,16 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
-Date: Mon, 13 Apr 2026 17:12:38 +0100
+Date: Tue, 14 Apr 2026 11:58:15 +0100
 Subject: [PATCH] Fix service name when no navigation
 
 ---
- src/ate/layouts/service-template.njk | 4 +++-
+ src/ate/layouts/prototype/service-template.njk | 4 +++-
  1 file changed, 3 insertions(+), 1 deletion(-)
 
-diff --git a/src/ate/layouts/service-template.njk b/src/ate/layouts/service-template.njk
-index 0851ff3..6ca15bf 100644
---- a/src/ate/layouts/service-template.njk
-+++ b/src/ate/layouts/service-template.njk
+diff --git a/src/ate/layouts/prototype/service-template.njk b/src/ate/layouts/prototype/service-template.njk
+index f241ce1..b2d62e4 100644
+--- a/src/ate/layouts/prototype/service-template.njk
++++ b/src/ate/layouts/prototype/service-template.njk
 @@ -52,7 +52,9 @@
      {%- else -%}
        {{ ateServiceHeader({

@@ -1,16 +1,16 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
-Date: Mon, 13 Apr 2026 17:08:26 +0100
+Date: Tue, 14 Apr 2026 11:55:50 +0100
 Subject: [PATCH] Replace GOV.UK One Login service header with ATE
 
 ---
- src/ate/layouts/service-template.njk | 12 ++++++++----
+ src/ate/layouts/prototype/service-template.njk | 12 ++++++++----
  1 file changed, 8 insertions(+), 4 deletions(-)
 
-diff --git a/src/ate/layouts/service-template.njk b/src/ate/layouts/service-template.njk
+diff --git a/src/ate/layouts/prototype/service-template.njk b/src/ate/layouts/prototype/service-template.njk
 index b617a7e..494693e 100644
---- a/src/ate/layouts/service-template.njk
-+++ b/src/ate/layouts/service-template.njk
+--- a/src/ate/layouts/prototype/service-template.njk
++++ b/src/ate/layouts/prototype/service-template.njk
 @@ -1,5 +1,6 @@
 +{%- set assetPath = assetPath | default("/plugin-assets/ate-frontend/src/ate/assets") -%}
 +

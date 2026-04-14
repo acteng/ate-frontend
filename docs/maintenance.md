@@ -48,7 +48,7 @@ After upgrading GOV.UK One Login Service Header, update the template:
 We also derive our service template layout from theirs. To update the layout:
 
 ```bash
-./src/ate/layouts/create-service-template.sh
+./src/ate/layouts/prototype/create-service-template.sh
 ```
 
 ## Creating patches
