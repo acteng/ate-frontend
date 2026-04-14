@@ -7,27 +7,14 @@ Upgrade GOV.UK Frontend in:
 * [package.json](../package.json)
 * [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
 
-### GOV.UK header component
+We derive the following templates from GOV.UK Frontend:
 
-GOV.UK Frontend [doesn't allow the crown logo to be customised in the header](https://github.com/alphagov/govuk-frontend/issues/1639),
-so we maintain a copy of the header template to replace it with the ATE logo.
+* ATE header component - the [crown cannot be changed](https://github.com/alphagov/govuk-frontend/issues/1639) in the
+  GOV.UK header, so we fork the template to replace it with the ATE logo
+* ATE footer component - the [crown cannot be removed](https://github.com/alphagov/govuk-frontend/issues/5952) from the
+  GOV.UK footer, so we fork the template to remove it
 
-After upgrading GOV.UK Frontend, update the header template:
-
-```bash
-./src/ate/components/ate-header/create-template.sh
-```
-
-### GOV.UK footer component
-
-GOV.UK Frontend [doesn't allow the crown logo to be removed from the footer](https://github.com/alphagov/govuk-frontend/issues/5952),
-so we maintain a copy of the footer template to remove it ourselves.
-
-After upgrading GOV.UK Frontend, update the footer template:
-
-```bash
-./src/ate/components/ate-footer/create-template.sh
-```
+[Update the templates](#updating-the-templates) after upgrading GOV.UK Frontend.
 
 ## Upgrading GOV.UK One Login Service Header
 
@@ -36,19 +23,20 @@ Upgrade GOV.UK One Login Service Header in:
 * [package.json](../package.json)
 * [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
 
-GOV.UK One Login Service Header [doesn't allow the crown logo to be customised](https://github.com/govuk-one-login/service-header/issues/40),
-so we maintain a copy of the template to replace it with the ATE logo.
+We derive the following templates from GOV.UK One Login Service Header:
 
-After upgrading GOV.UK One Login Service Header, update the template:
+* ATE service header component - the [crown cannot be changed](https://github.com/govuk-one-login/service-header/issues/40)
+  in the GOV.UK One Login Service Header, so we fork the template to replace it with the ATE logo
+* ATE service template layout
+
+[Update the templates](#updating-the-templates) after upgrading GOV.UK One Login Service Header.
+
+## Updating the templates
+
+To apply our patches to the upstream templates:
 
 ```bash
-./src/ate/components/ate-service-header/create-template.sh
-```
-
-We also derive our service template layout from theirs. To update the layout:
-
-```bash
-./src/ate/layouts/prototype/create-service-template.sh
+./create-templates.sh
 ```
 
 ## Creating patches
