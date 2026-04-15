@@ -17,6 +17,8 @@ Update the icons after upgrading GOV.UK Frontend:
 ./src/ate/assets/ate-icons/create-icons.sh
 ```
 
+Requires [Inkscape](https://inkscape.org/) and [ImageMagick](https://imagemagick.org/) to be installed.
+
 ### Templates
 
 We derive the following templates from GOV.UK Frontend:
