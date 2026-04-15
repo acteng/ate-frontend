@@ -20,3 +20,6 @@ convert \
 	\( "${TARGET_DIR}/favicon-48.png" -colors 32 \) \
 	"${TARGET_DIR}/favicon.ico"
 rm "${TARGET_DIR}/favicon-16.png" "${TARGET_DIR}/favicon-32.png" "${TARGET_DIR}/favicon-48.png"
+
+# ate-icon-mask.svg
+cp "${SOURCE_DIR}/govuk-icon-mask.svg" "${TARGET_DIR}/ate-icon-mask.svg"
