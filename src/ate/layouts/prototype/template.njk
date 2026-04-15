@@ -1,4 +1,6 @@
 {%- set assetPath = assetPath | default("/plugin-assets/ate-frontend/src/ate/assets") -%}
+{# govuk-organisation-colour("department-for-transport") #}
+{%- set themeColor = themeColor | default("#006853", true) -%}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 

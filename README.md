@@ -100,6 +100,7 @@ blocks and options, specifically:
 | Name                | Type     | Description                                                                                      |
 |---------------------|----------|--------------------------------------------------------------------------------------------------|
 | `opengraphImageUrl` | Variable | Specify an absolute URL to the ATE Frontend Open Graph image `ate-icons/ate-opengraph-image.png` |
+| `themeColor`        | Variable | Defaults to the DfT organisation colour                                                          |
 
 Learn [how to use layouts](https://prototype-kit.service.gov.uk/docs/how-to-use-layouts) in a prototype.
 
