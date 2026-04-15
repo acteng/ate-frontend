@@ -1,6 +1,6 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
-Date: Fri, 10 Apr 2026 10:41:09 +0100
+Date: Wed, 15 Apr 2026 14:57:18 +0100
 Subject: [PATCH] Replace GOV.UK logo with ATE logo
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Replace GOV.UK logo with ATE logo
  1 file changed, 2 insertions(+), 5 deletions(-)
 
 diff --git a/src/ate/components/ate-header/template.njk b/src/ate/components/ate-header/template.njk
-index 4a57d61..ec128cd 100644
+index 4a57d61..4c7ed1c 100644
 --- a/src/ate/components/ate-header/template.njk
 +++ b/src/ate/components/ate-header/template.njk
 @@ -1,14 +1,11 @@
@@ -23,8 +23,8 @@ index 4a57d61..ec128cd 100644
 -          classes: "govuk-header__logotype",
 -          ariaLabelText: "GOV.UK"
 -        }) | trim | indent(8) }}
-+        <img class="govuk-header__logotype ate-header__logotype" src="{{ params.assetPath }}/ate-header/ATE_Lesser_Arms_Landscape_White.png" alt="Active Travel England"/>
-+        <img class="govuk-header__logotype ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ATE_Lesser_Arms_Landscape_Black.png" alt="Active Travel England"/>
++        <img class="govuk-header__logotype ate-header__logotype" src="{{ params.assetPath }}/ate-header/ate-logo-white.png" alt="Active Travel England"/>
++        <img class="govuk-header__logotype ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ate-logo-black.png" alt="Active Travel England"/>
          {% if (params.productName) %}
          <span class="govuk-header__product-name">
            {{- params.productName -}}
