@@ -95,7 +95,11 @@ Layouts are used to share a common design across pages. This plugin provides the
 * `ate/layouts/prototype/service-template.njk` - uses the ATE service header and footer
 
 These layouts support all the [GOV.UK page template](https://design-system.service.gov.uk/styles/page-template/#template-blocks-and-options)
-blocks and options.
+blocks and options, specifically:
+
+| Name                | Type     | Description                                                                                      |
+|---------------------|----------|--------------------------------------------------------------------------------------------------|
+| `opengraphImageUrl` | Variable | Specify an absolute URL to the ATE Frontend Open Graph image `ate-icons/ate-opengraph-image.png` |
 
 Learn [how to use layouts](https://prototype-kit.service.gov.uk/docs/how-to-use-layouts) in a prototype.
 
