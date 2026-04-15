@@ -55,9 +55,9 @@ To apply our patches to the upstream templates:
 ./create-templates.sh
 ```
 
-## Creating patches
+If there are conflicts then the [patches will need to be recreated](#creating-patches).
 
-If there are conflicts when updating templates then the patches will need to be recreated.
+## Creating patches
 
 To create patches for a template:
 
