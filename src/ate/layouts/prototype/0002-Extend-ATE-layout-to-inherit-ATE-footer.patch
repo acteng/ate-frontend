@@ -8,11 +8,11 @@ Subject: [PATCH] Extend ATE layout to inherit ATE footer
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/src/ate/layouts/prototype/service-template.njk b/src/ate/layouts/prototype/service-template.njk
-index 494693e..f241ce1 100644
+index 19b88e7..f241ce1 100644
 --- a/src/ate/layouts/prototype/service-template.njk
 +++ b/src/ate/layouts/prototype/service-template.njk
 @@ -1,6 +1,4 @@
--{%- set assetPath = assetPath | default("/plugin-assets/ate-frontend/src/ate/assets") -%}
+-{%- set assetPath = assetPath | default("/plugin-assets/%40active-travel-england%2Fate-frontend/src/ate/assets") -%}
 -
 -{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 +{% extends "ate/layouts/prototype/template.njk" %}

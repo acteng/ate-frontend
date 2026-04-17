@@ -8,11 +8,11 @@ Subject: [PATCH] Replace GOV.UK One Login service header with ATE
  1 file changed, 8 insertions(+), 4 deletions(-)
 
 diff --git a/src/ate/layouts/prototype/service-template.njk b/src/ate/layouts/prototype/service-template.njk
-index b617a7e..494693e 100644
+index b617a7e..19b88e7 100644
 --- a/src/ate/layouts/prototype/service-template.njk
 +++ b/src/ate/layouts/prototype/service-template.njk
 @@ -1,5 +1,6 @@
-+{%- set assetPath = assetPath | default("/plugin-assets/ate-frontend/src/ate/assets") -%}
++{%- set assetPath = assetPath | default("/plugin-assets/%40active-travel-england%2Fate-frontend/src/ate/assets") -%}
 +
  {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 -{% from "../service-header.njk" import govukOneLoginServiceHeader %}
