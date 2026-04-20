@@ -6,6 +6,10 @@
   "author": "",
   "type": "commonjs",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acteng/ate-frontend.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
