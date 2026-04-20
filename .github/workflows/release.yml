@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
 
@@ -23,6 +22,6 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Publish package
-        run: npm publish --provenance --access public --tag next
+        run: npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
