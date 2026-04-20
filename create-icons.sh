@@ -22,5 +22,14 @@ convert \
 	\( <(inkscape -w 48 -h 48 --export-type=png -o - "${TARGET_DIR}/favicon.svg") -colors 32 \) \
 	"${TARGET_DIR}/favicon.ico"
 
+# ate-icon-{180,192,512}.png
+cp "${REPO_DIR}/design/govuk-frontend/govuk-icon.svg" "${TARGET_DIR}/ate-icon.svg"
+sed -i "s/${SOURCE_COLOUR}/${TARGET_COLOUR}/g" "${TARGET_DIR}/ate-icon.svg"
+for SIZE in 180 192 512
+do
+	inkscape -w "${SIZE}" -h "${SIZE}" -o "${TARGET_DIR}/ate-icon-${SIZE}.png" "${TARGET_DIR}/ate-icon.svg"
+done
+rm "${TARGET_DIR}/ate-icon.svg"
+
 # ate-icon-mask.svg
 cp "${SOURCE_DIR}/govuk-icon-mask.svg" "${TARGET_DIR}/ate-icon-mask.svg"

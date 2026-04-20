@@ -9,7 +9,7 @@ Upgrade GOV.UK Frontend in:
 
 ### Icons
 
-We derive the ATE icons from the GOV.UK icons.
+We derive the ATE icons from the GOV.UK icons and [design files](../design/README.md).
 
 Update the icons after upgrading GOV.UK Frontend:
 
