@@ -17,22 +17,22 @@ create_template() {
 create_template \
 	"node_modules/govuk-frontend/dist/govuk/components/header/template.njk" \
 	"src/ate/components/ate-header/template.njk" \
-	"src/ate/components/ate-header/*.patch"
+	"patches/components/ate-header/*.patch"
 
 # ATE footer component
 create_template \
 	"node_modules/govuk-frontend/dist/govuk/components/footer/template.njk" \
 	"src/ate/components/ate-footer/template.njk" \
-	"src/ate/components/ate-footer/*.patch"
+	"patches/components/ate-footer/*.patch"
 
 # ATE service header component
 create_template \
 	"node_modules/@govuk-one-login/service-header/dist/nunjucks/service-header/template.njk" \
 	"src/ate/components/ate-service-header/template.njk" \
-	"src/ate/components/ate-service-header/*.patch"
+	"patches/components/ate-service-header/*.patch"
 
 # ATE service template layout
 create_template \
 	"node_modules/@govuk-one-login/service-header/dist/nunjucks/service-header/layouts/service-header.njk" \
 	"src/ate/layouts/prototype/service-template.njk" \
-	"src/ate/layouts/prototype/*.patch"
+	"patches/layouts/service-template/*.patch"

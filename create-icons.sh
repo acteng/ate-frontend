@@ -36,4 +36,4 @@ cp "${SOURCE_DIR}/images/govuk-icon-mask.svg" "${TARGET_DIR}/ate-icon-mask.svg"
 
 # manifest.json
 cp "${SOURCE_DIR}/manifest.json" "${TARGET_DIR}/manifest.json"
-git apply ${TARGET_DIR}/*.patch
+git apply ${REPO_DIR}/patches/assets/manifest.json/*.patch
