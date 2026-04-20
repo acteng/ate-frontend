@@ -3,7 +3,10 @@
   "version": "0.1.0-alpha.1",
   "description": "ATE templates and styles for the web.",
   "license": "ISC",
-  "author": "",
+  "author": {
+    "name": "Mark Hobson",
+    "email": "mark.hobson@activetravelengland.gov.uk"
+  },
   "type": "commonjs",
   "main": "index.js",
   "repository": {
