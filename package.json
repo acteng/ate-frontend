@@ -7,6 +7,10 @@
     "name": "Mark Hobson",
     "email": "mark.hobson@activetravelengland.gov.uk"
   },
+  "files": [
+    "src/",
+    "govuk-prototype-kit.config.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acteng/ate-frontend.git"
