@@ -6,9 +6,14 @@ REPO_DIR=$(git rev-parse --show-toplevel)
 SOURCE_DIR="${REPO_DIR}/node_modules/govuk-frontend/dist/govuk/assets/images"
 TARGET_DIR="${REPO_DIR}/src/ate/assets/ate-icons"
 
+# GOV.UK Primary blue
+SOURCE_COLOUR="#1D70B8"
+# DfT organisation colour
+TARGET_COLOUR="#006853"
+
 # favicon.svg
 cp "${SOURCE_DIR}/favicon.svg" "${TARGET_DIR}/favicon.svg"
-git apply ${TARGET_DIR}/*.patch
+sed -i "s/${SOURCE_COLOUR}/${TARGET_COLOUR}/g" "${TARGET_DIR}/favicon.svg"
 
 # favicon.ico
 inkscape -w 16 -h 16 -o "${TARGET_DIR}/favicon-16.png" "${TARGET_DIR}/favicon.svg"
