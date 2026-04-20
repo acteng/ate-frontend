@@ -3,7 +3,7 @@
 set -eo pipefail
 
 REPO_DIR=$(git rev-parse --show-toplevel)
-SOURCE_DIR="${REPO_DIR}/node_modules/govuk-frontend/dist/govuk/assets/images"
+SOURCE_DIR="${REPO_DIR}/node_modules/govuk-frontend/dist/govuk/assets"
 TARGET_DIR="${REPO_DIR}/src/ate/assets/ate-icons"
 
 # GOV.UK Primary blue
@@ -12,7 +12,7 @@ SOURCE_COLOUR="#1D70B8"
 TARGET_COLOUR="#006853"
 
 # favicon.svg
-cp "${SOURCE_DIR}/favicon.svg" "${TARGET_DIR}/favicon.svg"
+cp "${SOURCE_DIR}/images/favicon.svg" "${TARGET_DIR}/favicon.svg"
 sed -i "s/${SOURCE_COLOUR}/${TARGET_COLOUR}/g" "${TARGET_DIR}/favicon.svg"
 
 # favicon.ico
@@ -32,4 +32,8 @@ done
 rm "${TARGET_DIR}/ate-icon.svg"
 
 # ate-icon-mask.svg
-cp "${SOURCE_DIR}/govuk-icon-mask.svg" "${TARGET_DIR}/ate-icon-mask.svg"
+cp "${SOURCE_DIR}/images/govuk-icon-mask.svg" "${TARGET_DIR}/ate-icon-mask.svg"
+
+# manifest.json
+cp "${SOURCE_DIR}/manifest.json" "${TARGET_DIR}/manifest.json"
+git apply ${TARGET_DIR}/*.patch
