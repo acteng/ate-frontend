@@ -16,15 +16,11 @@ cp "${SOURCE_DIR}/favicon.svg" "${TARGET_DIR}/favicon.svg"
 sed -i "s/${SOURCE_COLOUR}/${TARGET_COLOUR}/g" "${TARGET_DIR}/favicon.svg"
 
 # favicon.ico
-inkscape -w 16 -h 16 -o "${TARGET_DIR}/favicon-16.png" "${TARGET_DIR}/favicon.svg"
-inkscape -w 32 -h 32 -o "${TARGET_DIR}/favicon-32.png" "${TARGET_DIR}/favicon.svg"
-inkscape -w 48 -h 48 -o "${TARGET_DIR}/favicon-48.png" "${TARGET_DIR}/favicon.svg"
 convert \
-	\( "${TARGET_DIR}/favicon-16.png" -colors 16 \) \
-	\( "${TARGET_DIR}/favicon-32.png" -colors 32 \) \
-	\( "${TARGET_DIR}/favicon-48.png" -colors 32 \) \
+	\( <(inkscape -w 16 -h 16 --export-type=png -o - "${TARGET_DIR}/favicon.svg") -colors 16 \) \
+	\( <(inkscape -w 32 -h 32 --export-type=png -o - "${TARGET_DIR}/favicon.svg") -colors 32 \) \
+	\( <(inkscape -w 48 -h 48 --export-type=png -o - "${TARGET_DIR}/favicon.svg") -colors 32 \) \
 	"${TARGET_DIR}/favicon.ico"
-rm "${TARGET_DIR}/favicon-16.png" "${TARGET_DIR}/favicon-32.png" "${TARGET_DIR}/favicon-48.png"
 
 # ate-icon-mask.svg
 cp "${SOURCE_DIR}/govuk-icon-mask.svg" "${TARGET_DIR}/ate-icon-mask.svg"
