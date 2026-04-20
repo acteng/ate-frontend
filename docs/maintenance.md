@@ -14,7 +14,7 @@ We derive the ATE icons from the GOV.UK icons.
 Update the icons after upgrading GOV.UK Frontend:
 
 ```bash
-./src/ate/assets/ate-icons/create-icons.sh
+./create-icons.sh
 ```
 
 Requires [Inkscape](https://inkscape.org/) and [ImageMagick](https://imagemagick.org/) to be installed.
