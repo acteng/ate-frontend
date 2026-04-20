@@ -7,14 +7,9 @@
     "name": "Mark Hobson",
     "email": "mark.hobson@activetravelengland.gov.uk"
   },
-  "type": "commonjs",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acteng/ate-frontend.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@govuk-one-login/service-header": "~5.0.0",
