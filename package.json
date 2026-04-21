@@ -1,7 +1,7 @@
 {
   "name": "@active-travel-england/ate-frontend",
   "version": "0.1.0-alpha.1",
-  "description": "ATE templates and styles for the web.",
+  "description": "Active Travel England templates and styles for the web.",
   "license": "MIT",
   "author": {
     "name": "Mark Hobson",
