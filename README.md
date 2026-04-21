@@ -108,6 +108,7 @@ Learn [how to use layouts](https://prototype-kit.service.gov.uk/docs/how-to-use-
 
 * [Design files](design/README.md)
 * [Maintenance](docs/maintenance.md)
+* [Releasing](docs/releasing.md)
 
 ## Licence
 
