@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "colours-palette";
+
+$ate-functional-colours: (
+  brand: map.get(colours-palette.$ate-palette, "primary"),
+  template-background: map.get(colours-palette.$ate-palette, "tint-95"),
+  surface-background: map.get(colours-palette.$ate-palette, "tint-95"),
+  surface-border: map.get(colours-palette.$ate-palette, "tint-50")
+);
