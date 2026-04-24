@@ -2,16 +2,16 @@
 
 To release a new version of this project:
 
-1. Upgrade the package version and create a git tag:
+1. Tag the repository for the release:
 
    ```bash
-   npm version --tag-version-prefix= -m "Upgrade project version to %s" <version>
+   git tag <version>
    ```
 
-1. Push the commit and tag:
+1. Push the tag:
 
    ```bash
-   git push && git push --tags
+   git push --tags
    ```
    
 1. [Create a new GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release):
@@ -22,3 +22,21 @@ To release a new version of this project:
 
 1. Publishing a new GitHub release triggers the [Release workflow](../.github/workflows/release.yml) that publishes the
    package to npm
+
+1. Upgrade the package to the next version:
+
+   ```bash
+   npm version --no-git-tag-version <next-version>
+   ```
+
+1. Stage the changes and commit:
+
+   ```bash
+   git commit -m "Upgrade project version to <next-version>"
+   ```
+
+1. Push the commit
+
+   ```bash
+   git push
+   ```
