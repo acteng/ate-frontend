@@ -78,6 +78,40 @@ plus:
 
 This project can also be used as a plugin for the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/).
 
+### Installing
+
+1. [Create a new prototype](https://prototype-kit.service.gov.uk/docs/create-new-prototype)
+
+1. Install ATE Frontend:
+
+   ```bash
+   npm install @active-travel-england/ate-frontend
+   ```
+
+1. [Install the GOV.UK One Login service header](https://github.com/govuk-one-login/service-header/blob/main/docs/prototype-kit-installation.md)
+   that is used by ATE Frontend:
+
+   ```bash
+   npm install @govuk-one-login/service-header
+   ```
+
+1. Configure the [GOV.UK Frontend settings](https://frontend.design-system.service.gov.uk/sass-api-reference/#settings)
+   for ATE branding by creating `app/assets/sass/settings.scss`:
+
+   ```scss
+   @use "node_modules/@active-travel-england/ate-frontend/src/ate/settings";
+   
+   $govuk-font-family: settings.$ate-font-family;
+   $govuk-functional-colours: settings.$ate-functional-colours;
+   ```
+
+1. Change the default layout `app/views/layouts/main.html` to use the ATE branding:
+
+   ```diff
+   -{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+   +{% extends "ate/layouts/prototype/template.njk" %}
+   ```
+
 ### Templates
 
 Templates are used to create pages. This plugin provides the following templates:
