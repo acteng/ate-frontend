@@ -13,10 +13,10 @@
     }
   ],
   "assets": [
-    "/src/ate/assets/"
+    "/dist/ate/assets/"
   ],
   "nunjucksPaths": [
-    "/src/"
+    "/dist/"
   ],
   "nunjucksMacros": [
     {
@@ -33,17 +33,17 @@
     }
   ],
   "sass": [
-    "/src/ate/index.scss"
+    "/dist/ate/index.scss"
   ],
   "templates": [
     {
       "name": "Blank ATE page",
-      "path": "/src/ate/templates/blank-ate.njk",
+      "path": "/dist/ate/templates/blank-ate.njk",
       "type": "nunjucks"
     },
     {
       "name": "Blank ATE service page",
-      "path": "/src/ate/templates/blank-ate-service.njk",
+      "path": "/dist/ate/templates/blank-ate-service.njk",
       "type": "nunjucks"
     }
   ]

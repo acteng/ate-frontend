@@ -99,7 +99,7 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
    for ATE branding by creating `app/assets/sass/settings.scss`:
 
    ```scss
-   @use "node_modules/@active-travel-england/ate-frontend/src/ate/settings";
+   @use "node_modules/@active-travel-england/ate-frontend/dist/ate/settings";
    
    $govuk-font-family: settings.$ate-font-family;
    $govuk-functional-colours: settings.$ate-functional-colours;
@@ -137,6 +137,16 @@ blocks and options, specifically:
 | `themeColor`        | Variable | Defaults to the DfT organisation colour                                                          |
 
 Learn [how to use layouts](https://prototype-kit.service.gov.uk/docs/how-to-use-layouts) in a prototype.
+
+## Building
+
+To build the package:
+
+```bash
+npm run build
+```
+
+The package files are in the directory `dist`.
 
 ## See also
 

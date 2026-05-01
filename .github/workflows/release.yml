@@ -22,6 +22,12 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
 
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Build package
+        run: npm run build
+
       - name: Publish package
         run: npm publish --access public --tag next
         env:
