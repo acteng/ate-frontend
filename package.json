@@ -21,11 +21,15 @@
   },
   "scripts": {
     "copy-files": "mkdir -p dist/ && cp -rT src/ate/ dist/ate/",
-    "build": "npm run copy-files"
+    "build-css": "sass --style compressed src/ate/index.scss dist/ate/ate-frontend.min.css",
+    "build": "npm run copy-files && npm run build-css"
   },
   "dependencies": {
     "@govuk-one-login/service-header": "~5.0.0",
     "govuk-frontend": "~6.1.0"
+  },
+  "devDependencies": {
+    "sass": "~1.99.0"
   },
   "engines": {
     "node": "24",
