@@ -74,6 +74,70 @@ plus:
 |-------------|--------|--------------------------------------------|
 | `assetPath` | string | Specify a path to the ATE Frontend assets. |
 
+## Using with Node.js
+
+Install ATE Frontend to use the templates and styles in your Node.js project.
+
+### Installing
+
+To install ATE Frontend:
+
+```bash
+npm install @active-travel-england/ate-frontend
+```
+
+### Configuring the templates
+
+Configure [Nunjucks](https://mozilla.github.io/nunjucks/) to find the components by adding the template path:
+
+```javascript
+nunjucks.configure([
+    "node_modules/@active-travel-england/ate-frontend/dist"
+]);
+```
+
+### Serving the assets
+
+Configure your application to serve the assets. For example, using [Express](https://expressjs.com/):
+
+```javascript
+app.use("/assets", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/assets"));
+```
+
+Use this path when configuring the component option `assetPath` in your templates. For example:
+
+```nunjucks
+{{ ateHeader({
+    assetPath: "/assets"
+}) }}
+```
+
+### Serving the styles
+
+You can either use the prebuilt files or build them yourself in your project.
+
+To use the prebuilt files:
+
+1. Configure your application to serve the styles. For example, using Express:
+
+   ```javascript
+   app.use("/styles/ate-frontend.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/ate-frontend.min.css"));
+   ```
+
+1. Add the CSS file to your pages:
+
+   ```html
+   <head>
+       <link rel="stylesheet" href="/styles/ate-frontend.min.css">
+   </head>
+   ```
+
+Alternatively, if your project already uses [Sass](https://sass-lang.com/) then import the styles to build them yourself:
+
+```scss
+@import "node_modules/@active-travel-england/ate-frontend/dist/ate";
+```
+
 ## Using with the Prototype Kit
 
 This project can also be used as a plugin for the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/).
