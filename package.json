@@ -1,7 +1,7 @@
 {
   "name": "@active-travel-england/ate-frontend",
   "version": "0.1.0-alpha.7",
-  "description": "Active Travel England templates and styles for the web.",
+  "description": "Active Travel England templates and styles for digital services.",
   "homepage": "https://github.com/acteng/ate-frontend#readme",
   "bugs": {
     "url": "https://github.com/acteng/ate-frontend/issues"

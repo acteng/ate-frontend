@@ -1,6 +1,6 @@
 # ATE Frontend
 
-Active Travel England templates and styles for the web.
+Active Travel England templates and styles for digital services.
 
 ## Compatibility
 
