@@ -167,7 +167,7 @@ $govuk-functional-colours: settings.$ate-functional-colours;
 Build the CSS using the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path):
 
 * GOV.UK Frontend: `node_modules/govuk-frontend/dist`
-* ATE Frontend: `node_modules/@active-travel-england/ate-frontend/dist/ate`
+* ATE Frontend: `node_modules/@active-travel-england/ate-frontend/dist`
 
 ## Using with the Prototype Kit
 
