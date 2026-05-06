@@ -78,6 +78,13 @@ plus:
 
 Install ATE Frontend to use the templates and styles in your Node.js project.
 
+### Prerequisites
+
+ATE Frontend depends on the following projects being installed:
+
+* [Install GOV.UK Frontend](https://frontend.design-system.service.gov.uk/installing-with-npm/)
+* [Install GOV.UK One Login service header](https://github.com/govuk-one-login/service-header#how-to-start-using-the-header-in-your-service)
+
 ### Installing
 
 To install ATE Frontend:
