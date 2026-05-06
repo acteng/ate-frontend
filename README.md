@@ -152,7 +152,7 @@ Add the CSS files to your pages:
 Alternatively, import the styles to build them yourself:
 
 ```scss
-// Configure GOV.UK Frontend with ATE branding
+// Configure GOV.UK Frontend settings for ATE branding
 @use "ate/settings";
 $govuk-font-family: settings.$ate-font-family;
 $govuk-functional-colours: settings.$ate-functional-colours;
@@ -195,7 +195,6 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
 
    ```scss
    @use "node_modules/@active-travel-england/ate-frontend/dist/ate/settings";
-   
    $govuk-font-family: settings.$ate-font-family;
    $govuk-functional-colours: settings.$ate-functional-colours;
    ```
