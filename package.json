@@ -20,10 +20,11 @@
     "url": "git+https://github.com/acteng/ate-frontend.git"
   },
   "scripts": {
+    "clean": "rm -rf dist/",
     "ate-frontend:copy-files": "mkdir -p dist/ && cp -rT src/ate/ dist/ate/",
     "ate-frontend:build-css": "sass --style compressed src/ate/index.scss dist/ate/ate-frontend.min.css",
     "ate-frontend:build": "npm run ate-frontend:copy-files && npm run ate-frontend:build-css",
-    "build": "npm run ate-frontend:build"
+    "build": "npm run clean && npm run ate-frontend:build"
   },
   "dependencies": {
     "@govuk-one-login/service-header": "~5.0.0",
