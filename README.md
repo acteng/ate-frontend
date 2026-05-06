@@ -78,64 +78,27 @@ plus:
 
 Install ATE Frontend to use the templates and styles in your Node.js project.
 
-### Installing GOV.UK Frontend
-
-ATE Frontend is built upon GOV.UK Frontend.
-[Install GOV.UK Frontend](https://frontend.design-system.service.gov.uk/installing-with-npm/) in your project.
-
-### Serving the GOV.UK Frontend styles
-
-ATE Frontend rebrands the GOV.UK Frontend styles. You can either use the prebuilt files or build them yourself in your
-project.
-
-To use the prebuilt files:
-
-1. Configure your application to service the styles. For example, using Express:
-   
-   ```javascript
-   app.use("/styles/govuk-frontend-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-frontend-ate.min.css"));
-   ```
-
-1. Add the CSS file to your pages:
-
-   ```html
-   <head>
-       <link rel="stylesheet" href="/styles/govuk-frontend-ate.min.css">
-   </head>
-   ```
-
-Alternatively, if your project already uses Sass then import the styles to build them yourself:
-
-```scss
-@use "ate/settings";
-
-$govuk-font-family: settings.$ate-font-family;
-$govuk-functional-colours: settings.$ate-functional-colours;
-
-@import "govuk";
-```
-
-### Installing GOV.UK One Login service header
-
-The ATE service header is built upon the GOV.UK One Login service header.
-[Install GOV.UK One Login service header](https://github.com/govuk-one-login/service-header#how-to-start-using-the-header-in-your-service)
-in your project.
-
 ### Installing
 
-To install ATE Frontend:
+Install ATE Frontend:
 
 ```bash
 npm install @active-travel-england/ate-frontend
 ```
 
+This will also install [GOV.UK Frontend](https://frontend.design-system.service.gov.uk/) and
+[GOV.UK One Login service header](https://github.com/govuk-one-login/service-header) that are used by ATE Frontend.
+
 ### Configuring the templates
 
-Configure [Nunjucks](https://mozilla.github.io/nunjucks/) to find the components by adding the template path:
+Configure [Nunjucks](https://mozilla.github.io/nunjucks/) to find the components by adding the template paths:
 
 ```javascript
 nunjucks.configure([
-    "node_modules/@active-travel-england/ate-frontend/dist"
+    // GOV.UK Frontend templates
+    "node_modules/govuk-frontend/dist",
+    // ATE Frontend templates
+    "node_modules/@active-travel-england/ate-frontend/dist",
 ]);
 ```
 
@@ -144,6 +107,9 @@ nunjucks.configure([
 Configure your application to serve the assets. For example, using [Express](https://expressjs.com/):
 
 ```javascript
+// GOV.UK Frontend assets
+app.use("/assets", express.static("node_modules/govuk-frontend/dist/govuk/assets"));
+// ATE Frontend assets
 app.use("/assets", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/assets"));
 ```
 
@@ -157,29 +123,51 @@ Use this path when configuring the component option `assetPath` in your template
 
 ### Serving the styles
 
-You can either use the prebuilt files or build them yourself in your project.
+You can either use the prebuilt files or build them yourself if your project uses [Sass](https://sass-lang.com/).
 
-To use the prebuilt files:
+#### Using the prebuilt files
 
-1. Configure your application to serve the styles. For example, using Express:
+Configure your application to serve the styles. For example, using Express:
 
-   ```javascript
-   app.use("/styles/ate-frontend.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/ate-frontend.min.css"));
-   ```
+```javascript
+// GOV.UK Frontend styles with ATE branding
+app.use("/styles/govuk-frontend-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-frontend-ate.min.css"));
+// ATE Frontend styles
+app.use("/styles/ate-frontend.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/ate-frontend.min.css"));
+```
 
-1. Add the CSS file to your pages:
+Add the CSS files to your pages:
 
-   ```html
-   <head>
-       <link rel="stylesheet" href="/styles/ate-frontend.min.css">
-   </head>
-   ```
+```html
+<head>
+    <!-- GOV.UK Frontend styles with ATE branding -->
+    <link rel="stylesheet" href="/styles/govuk-frontend-ate.min.css">
+    <!-- ATE Frontend styles -->
+    <link rel="stylesheet" href="/styles/ate-frontend.min.css">
+</head>
+```
 
-Alternatively, if your project already uses [Sass](https://sass-lang.com/) then import the styles to build them yourself:
+#### Building them yourself
+
+Alternatively, import the styles to build them yourself:
 
 ```scss
-@import "node_modules/@active-travel-england/ate-frontend/dist/ate";
+// Configure GOV.UK Frontend with ATE branding
+@use "ate/settings";
+$govuk-font-family: settings.$ate-font-family;
+$govuk-functional-colours: settings.$ate-functional-colours;
+
+// GOV.UK Frontend styles
+@import "govuk";
+
+// ATE Frontend styles
+@import "ate";
 ```
+
+Build the CSS using the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path):
+
+* GOV.UK Frontend: `node_modules/govuk-frontend/dist`
+* ATE Frontend: `node_modules/@active-travel-england/ate-frontend/dist/ate`
 
 ## Using with the Prototype Kit
 
