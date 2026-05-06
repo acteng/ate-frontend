@@ -83,6 +83,38 @@ Install ATE Frontend to use the templates and styles in your Node.js project.
 ATE Frontend is built upon GOV.UK Frontend.
 [Install GOV.UK Frontend](https://frontend.design-system.service.gov.uk/installing-with-npm/) in your project.
 
+### Serving the GOV.UK Frontend styles
+
+ATE Frontend rebrands the GOV.UK Frontend styles. You can either use the prebuilt files or build them yourself in your
+project.
+
+To use the prebuilt files:
+
+1. Configure your application to service the styles. For example, using Express:
+   
+   ```javascript
+   app.use("/styles/govuk-frontend-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-frontend-ate.min.css"));
+   ```
+
+1. Add the CSS file to your pages:
+
+   ```html
+   <head>
+       <link rel="stylesheet" href="/styles/govuk-frontend-ate.min.css">
+   </head>
+   ```
+
+Alternatively, if your project already uses Sass then import the styles to build them yourself:
+
+```scss
+@use "ate/settings";
+
+$govuk-font-family: settings.$ate-font-family;
+$govuk-functional-colours: settings.$ate-functional-colours;
+
+@import "govuk";
+```
+
 ### Installing GOV.UK One Login service header
 
 The ATE service header is built upon the GOV.UK One Login service header.
