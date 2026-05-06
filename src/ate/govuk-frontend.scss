@@ -1,0 +1,6 @@
+@use "settings";
+
+$govuk-font-family: settings.$ate-font-family;
+$govuk-functional-colours: settings.$ate-functional-colours;
+
+@import "govuk";

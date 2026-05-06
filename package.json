@@ -24,7 +24,9 @@
     "ate-frontend:copy-files": "mkdir -p dist/ && cp -rT src/ate/ dist/ate/",
     "ate-frontend:build-css": "sass --style compressed src/ate/index.scss dist/ate/ate-frontend.min.css",
     "ate-frontend:build": "npm run ate-frontend:copy-files && npm run ate-frontend:build-css",
-    "build": "npm run clean && npm run ate-frontend:build"
+    "govuk-frontend:build-css": "sass --style compressed --load-path=node_modules/govuk-frontend/dist src/ate/govuk-frontend.scss dist/ate/govuk-frontend-ate.min.css",
+    "govuk-frontend:build": "npm run govuk-frontend:build-css",
+    "build": "npm run clean && npm run ate-frontend:build && npm run govuk-frontend:build"
   },
   "dependencies": {
     "@govuk-one-login/service-header": "~5.0.0",
