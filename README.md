@@ -132,8 +132,8 @@ Configure your application to serve the styles. For example, using Express:
 ```javascript
 // GOV.UK Frontend styles with ATE branding
 app.use("/styles/govuk-frontend-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-frontend-ate.min.css"));
-// GOV.UK One Login service header styles
-app.use("/styles", express.static("node_modules/@govuk-one-login/service-header/dist/styles"));
+// GOV.UK One Login service header styles with ATE branding
+app.use("/styles/govuk-one-login-service-header-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-one-login-service-header-ate.min.css"));
 // ATE Frontend styles
 app.use("/styles/ate-frontend.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/ate-frontend.min.css"));
 ```
@@ -144,8 +144,8 @@ Add the CSS files to your pages:
 <head>
     <!-- GOV.UK Frontend styles with ATE branding -->
     <link rel="stylesheet" href="/styles/govuk-frontend-ate.min.css">
-    <!-- GOV.UK One Login service header styles -->
-    <link rel="stylesheet" href="/styles/service-header.min.css">
+    <!-- GOV.UK One Login service header styles with ATE branding -->
+    <link rel="stylesheet" href="/styles/govuk-one-login-service-header-ate.min.css">
     <!-- ATE Frontend styles -->
     <link rel="stylesheet" href="/styles/ate-frontend.min.css">
 </head>
