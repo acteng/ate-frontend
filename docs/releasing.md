@@ -17,7 +17,10 @@ To release a new version of this project:
 1. [Create a new GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release):
    * Tag: `<version>`
    * Release title: `<version>`
-   * Release notes: Write the release notes for this version
+   * Release notes: Write the release notes for this version. These can be based on:
+     ```bash
+     git log --pretty=format:'* %s' --reverse <previous-version>..<version>
+     ```
    * Set as a pre-release: Check if not a final release
 
 1. Publishing a new GitHub release triggers the [Release workflow](../.github/workflows/release.yml) that publishes the
