@@ -30,22 +30,22 @@ We derive the following templates from GOV.UK Frontend:
 
 [Update the templates](#updating-the-templates) after upgrading GOV.UK Frontend.
 
-## Upgrading GOV.UK One Login Service Header
+## Upgrading GOV.UK One Login service header
 
-Upgrade GOV.UK One Login Service Header in:
+Upgrade GOV.UK One Login service header in:
 
 * [package.json](../package.json)
 * [govuk-prototype-kit.config.json](../govuk-prototype-kit.config.json)
 
 ### Templates
 
-We derive the following templates from GOV.UK One Login Service Header:
+We derive the following templates from GOV.UK One Login service header:
 
 * ATE service header component - the [crown cannot be changed](https://github.com/govuk-one-login/service-header/issues/40)
-  in the GOV.UK One Login Service Header, so we fork the template to replace it with the ATE logo
+  in the GOV.UK One Login service header, so we fork the template to replace it with the ATE logo
 * ATE service template layout
 
-[Update the templates](#updating-the-templates) after upgrading GOV.UK One Login Service Header.
+[Update the templates](#updating-the-templates) after upgrading GOV.UK One Login service header.
 
 ## Updating the templates
 
