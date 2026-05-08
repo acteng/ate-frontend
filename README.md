@@ -10,6 +10,23 @@ The following version matrix details the compatibility between this project and 
 |--------------------|-----------------|---------------------------------|
 | 0.1.0 (unreleased) | 6.1.0           | 6.0.0                           |
 
+## Page template
+
+The page template combines the boilerplate markup and components needed for a basic ATE page. It includes:
+
+* everything from the [GOV.UK page template](https://design-system.service.gov.uk/styles/page-template/)
+* the ATE favicon, and other related theme icons
+* the [ATE header component](#ate-header) and [ATE footer component](#ate-footer)
+
+Use in a Nunjuncks template:
+
+```nunjucks
+{% extends "ate/template.njk" %}
+```
+
+The template supports all the GOV.UK page template
+[blocks and options](https://design-system.service.gov.uk/styles/page-template/#template-blocks-and-options).
+
 ## Components
 
 This project provides the following components.
