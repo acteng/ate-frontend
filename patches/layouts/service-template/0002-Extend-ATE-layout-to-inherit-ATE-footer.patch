@@ -1,6 +1,6 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
-Date: Fri, 17 Apr 2026 17:59:12 +0100
+Date: Thu, 7 May 2026 10:12:24 +0100
 Subject: [PATCH] Extend ATE layout to inherit ATE footer
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Extend ATE layout to inherit ATE footer
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/src/ate/layouts/prototype/service-template.njk b/src/ate/layouts/prototype/service-template.njk
-index 19b88e7..f241ce1 100644
+index fd072ea..5fd5d87 100644
 --- a/src/ate/layouts/prototype/service-template.njk
 +++ b/src/ate/layouts/prototype/service-template.njk
 @@ -1,6 +1,4 @@
@@ -17,8 +17,8 @@ index 19b88e7..f241ce1 100644
 -{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 +{% extends "ate/layouts/prototype/template.njk" %}
  
- {% block header %}
-     {%- if navigationItems -%}
+ {% block govukHeader %}
+   {{ ateServiceHeader({
 -- 
 2.43.0
 

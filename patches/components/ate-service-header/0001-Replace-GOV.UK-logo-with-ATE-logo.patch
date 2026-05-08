@@ -1,6 +1,6 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
-Date: Wed, 15 Apr 2026 15:03:23 +0100
+Date: Wed, 6 May 2026 15:51:28 +0100
 Subject: [PATCH] Replace GOV.UK logo with ATE logo
 
 ---
@@ -8,10 +8,10 @@ Subject: [PATCH] Replace GOV.UK logo with ATE logo
  1 file changed, 2 insertions(+), 25 deletions(-)
 
 diff --git a/src/ate/components/ate-service-header/template.njk b/src/ate/components/ate-service-header/template.njk
-index ac50636..4dc7939 100644
+index fd5980d..41703b3 100644
 --- a/src/ate/components/ate-service-header/template.njk
 +++ b/src/ate/components/ate-service-header/template.njk
-@@ -28,31 +28,8 @@ Component options:
+@@ -26,31 +26,8 @@ Component options:
      <div class="rebranded-one-login-header__container govuk-width-container">
        <div class="rebranded-one-login-header__logo">
          <a href="{{ homepageLink }}" class="rebranded-one-login-header__link rebranded-one-login-header__link--homepage">

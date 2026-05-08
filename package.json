@@ -29,7 +29,7 @@
     "build": "npm run clean && npm run ate-frontend:build && npm run govuk-frontend:build"
   },
   "dependencies": {
-    "@govuk-one-login/service-header": "~5.0.0",
+    "@govuk-one-login/service-header": "~6.0.0",
     "govuk-frontend": "~6.1.0"
   },
   "devDependencies": {
