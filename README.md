@@ -191,7 +191,8 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
    npm install @active-travel-england/ate-frontend
    ```
 
-1. [Install the GOV.UK One Login service header](https://github.com/govuk-one-login/service-header/blob/main/docs/prototype-kit-installation.md)
+1. Plugin dependencies are only installed transitively when using the UI.
+   [Install the GOV.UK One Login service header](https://github.com/govuk-one-login/service-header/blob/main/docs/prototype-kit-installation.md)
    that is used by ATE Frontend:
 
    ```bash
