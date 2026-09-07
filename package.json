@@ -35,7 +35,7 @@
     "govuk-frontend": "~6.1.0"
   },
   "devDependencies": {
-    "sass": "~1.100.0"
+    "sass": "~1.104.0"
   },
   "engines": {
     "node": "24",
