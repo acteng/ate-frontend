@@ -6,9 +6,9 @@ Active Travel England templates and styles for digital services.
 
 The following version matrix details the compatibility between this project and other frontend components:
 
-| ATE Frontend       | GOV.UK Frontend | GOV.UK One Login service header |
-|--------------------|-----------------|---------------------------------|
-| 0.1.0 (unreleased) | 6.1.0           | 6.0.0                           |
+| ATE Frontend | GOV.UK Frontend | GOV.UK One Login service header |
+|--------------|-----------------|---------------------------------|
+| 0.1.0        | 6.1.0           | 6.0.0                           |
 
 ## Page template
 
