@@ -174,19 +174,21 @@ Add the CSS files to your pages:
 Alternatively, import the styles to build them yourself:
 
 ```scss
-// Configure GOV.UK Frontend settings for ATE branding
 @use "ate/settings";
-$govuk-font-family: settings.$ate-font-family;
-$govuk-functional-colours: settings.$ate-functional-colours;
 
-// GOV.UK Frontend styles
-@import "govuk";
-
-// GOV.UK One Login service header styles
-@import "service-header";
+// GOV.UK Frontend styles with ATE branding
+@use "govuk" with (
+  $govuk-font-family: settings.$ate-font-family,
+  $govuk-functional-colours: settings.$ate-functional-colours
+);
 
 // ATE Frontend styles
-@import "ate";
+@use "ate";
+
+// GOV.UK One Login service header styles with ATE branding
+$govuk-font-family: settings.$ate-font-family;
+$govuk-functional-colours: settings.$ate-functional-colours;
+@import "service-header";
 ```
 
 Build the CSS using the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path):
