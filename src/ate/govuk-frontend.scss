@@ -1,6 +1,6 @@
 @use "settings";
 
-@use "govuk" with (
+@use "pkg:govuk-frontend" with (
   $govuk-font-family: settings.$ate-font-family,
   $govuk-functional-colours: settings.$ate-functional-colours
 );
