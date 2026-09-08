@@ -9,7 +9,7 @@ The following version matrix details the compatibility between this project and 
 | ATE Frontend       | GOV.UK Frontend | GOV.UK One Login service header |
 |--------------------|-----------------|---------------------------------|
 | 0.1.0              | 6.1.0           | 6.0.0                           |
-| 0.2.0 (unreleased) | 6.1.0           | 6.0.0                           |
+| 0.2.0 (unreleased) | 6.2.0           | 6.0.0                           |
 
 ## Page template
 

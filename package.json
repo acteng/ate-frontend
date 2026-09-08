@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@govuk-one-login/service-header": "~6.0.0",
-    "govuk-frontend": "~6.1.0"
+    "govuk-frontend": "~6.2.0"
   },
   "devDependencies": {
     "sass": "~1.104.0"
