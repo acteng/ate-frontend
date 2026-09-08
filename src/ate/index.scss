@@ -1,2 +1,2 @@
-@import "components";
-@import "settings";
+@use "components";
+@forward "settings";
