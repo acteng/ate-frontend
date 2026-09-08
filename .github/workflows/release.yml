@@ -29,6 +29,7 @@ jobs:
         run: npm run build
 
       - name: Publish package
-        run: npm publish --access public
         env:
+          PRERELEASE: ${{ github.event.release.prerelease }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public --tag $([[ ${PRERELEASE} = 'true' ]] && echo 'next' || echo 'latest')

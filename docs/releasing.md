@@ -21,7 +21,9 @@ To release a new version of this project:
      ```bash
      git log --pretty=format:'* %s' --reverse <previous-version>..<version>
      ```
-   * Release label: Latest
+   * Release label:
+     * Pre-release: to publish an upcoming version (e.g. alpha)
+     * Latest: to publish a final version
 
 1. Publishing a new GitHub release triggers the [Release workflow](../.github/workflows/release.yml) that publishes the
    package to npm
