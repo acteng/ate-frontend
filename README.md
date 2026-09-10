@@ -174,7 +174,7 @@ Add the CSS files to your pages:
 Alternatively, import the styles to build them yourself:
 
 ```scss
-@use "ate/settings";
+@use "pkg:@active-travel-england/ate-frontend/settings";
 
 // GOV.UK Frontend styles with ATE branding
 @use "pkg:govuk-frontend" with (
@@ -183,7 +183,7 @@ Alternatively, import the styles to build them yourself:
 );
 
 // ATE Frontend styles
-@use "ate";
+@use "pkg:@active-travel-england/ate-frontend";
 
 // GOV.UK One Login service header styles with ATE branding
 $govuk-font-family: settings.$ate-font-family;
@@ -192,11 +192,11 @@ $govuk-functional-colours: settings.$ate-functional-colours;
 ```
 
 Build the CSS using the [Node.js pkg: importer](https://sass-lang.com/documentation/cli/dart-sass/#pkg-importer-node)
-and the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path):
+and the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path) until GOV.UK One Login
+service header migrates to `@use`:
 
-* GOV.UK Frontend (until GOV.UK One Login service header migrates to `@use`): `node_modules/govuk-frontend/dist`
+* GOV.UK Frontend: `node_modules/govuk-frontend/dist`
 * GOV.UK One Login service header: `node_modules/@govuk-one-login/service-header/dist/styles`
-* ATE Frontend: `node_modules/@active-travel-england/ate-frontend/dist`
 
 ## Using with the Prototype Kit
 

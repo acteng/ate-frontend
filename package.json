@@ -15,6 +15,14 @@
     "dist/",
     "govuk-prototype-kit.config.json"
   ],
+  "exports": {
+    ".": {
+      "sass": "./dist/ate/index.scss"
+    },
+    "./*": {
+      "sass": "./dist/ate/*"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acteng/ate-frontend.git"
