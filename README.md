@@ -177,7 +177,7 @@ Alternatively, import the styles to build them yourself:
 @use "ate/settings";
 
 // GOV.UK Frontend styles with ATE branding
-@use "govuk" with (
+@use "pkg:govuk-frontend" with (
   $govuk-font-family: settings.$ate-font-family,
   $govuk-functional-colours: settings.$ate-functional-colours
 );
@@ -191,9 +191,10 @@ $govuk-functional-colours: settings.$ate-functional-colours;
 @import "service-header";
 ```
 
-Build the CSS using the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path):
+Build the CSS using the [Node.js pkg: importer](https://sass-lang.com/documentation/cli/dart-sass/#pkg-importer-node)
+and the following [load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path):
 
-* GOV.UK Frontend: `node_modules/govuk-frontend/dist`
+* GOV.UK Frontend (until GOV.UK One Login service header migrates to `@use`): `node_modules/govuk-frontend/dist`
 * GOV.UK One Login service header: `node_modules/@govuk-one-login/service-header/dist/styles`
 * ATE Frontend: `node_modules/@active-travel-england/ate-frontend/dist`
 
