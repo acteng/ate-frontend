@@ -230,6 +230,7 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
    for ATE branding by creating `app/assets/sass/settings.scss`:
 
    ```scss
+   // Configure GOV.UK Frontend for ATE branding
    @use "node_modules/@active-travel-england/ate-frontend/dist/ate/settings" as ate-frontend;
    $govuk-font-family: ate-frontend.$ate-font-family;
    $govuk-functional-colours: ate-frontend.$ate-functional-colours;
