@@ -1,4 +1,4 @@
-@use "settings";
+@use "ate/settings";
 
 @use "pkg:govuk-frontend" with (
   $govuk-font-family: settings.$ate-font-family,

@@ -149,9 +149,9 @@ Configure your application to serve the styles. For example, using Express:
 
 ```javascript
 // GOV.UK Frontend styles with ATE branding
-app.use("/styles/govuk-frontend-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-frontend-ate.min.css"));
+app.use("/styles/govuk-frontend-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/govuk-frontend-ate.min.css"));
 // GOV.UK One Login service header styles with ATE branding
-app.use("/styles/govuk-one-login-service-header-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/govuk-one-login-service-header-ate.min.css"));
+app.use("/styles/govuk-one-login-service-header-ate.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/govuk-one-login-service-header-ate.min.css"));
 // ATE Frontend styles
 app.use("/styles/ate-frontend.min.css", express.static("node_modules/@active-travel-england/ate-frontend/dist/ate/ate-frontend.min.css"));
 ```
