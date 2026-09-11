@@ -196,6 +196,14 @@ service header migrates to `@use`:
 * GOV.UK Frontend: `node_modules/govuk-frontend/dist`
 * GOV.UK One Login service header: `node_modules/@govuk-one-login/service-header/dist/styles`
 
+The ATE Frontend Sass module exposes the following settings:
+
+| Setting                   | Description                                                                                                                                                                                                    |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `$ate-functional-colours` | Functional colours for the ATE palette. These are used to override [$govuk-functional-colours](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-functional-colours) in GOV.UK Frontend. |
+| `$ate-palette`            | ATE colour palette, similar to the [GOV.UK palette](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-palette--internal.scss)                           |
+| `$ate-font-family`        | Font families to use for all ATE typography on screen media, similar to [$govuk-font-family](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font-family)                              |
+
 ## Using with the Prototype Kit
 
 This project can also be used as a plugin for the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/).
