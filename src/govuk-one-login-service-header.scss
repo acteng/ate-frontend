@@ -1,6 +1,6 @@
-@use "ate/settings";
+@use "ate/settings" as ate-frontend;
 
-$govuk-font-family: settings.$ate-font-family;
-$govuk-functional-colours: settings.$ate-functional-colours;
+$govuk-font-family: ate-frontend.$ate-font-family;
+$govuk-functional-colours: ate-frontend.$ate-functional-colours;
 
 @import "service-header";
