@@ -1,5 +1,6 @@
 @use "ate/settings" as ate-frontend;
 
+// GOV.UK Frontend styles with ATE branding
 @use "pkg:govuk-frontend" with (
   $govuk-font-family: ate-frontend.$ate-font-family,
   $govuk-functional-colours: ate-frontend.$ate-functional-colours
