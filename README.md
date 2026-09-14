@@ -10,7 +10,7 @@ The following version matrix details the compatibility between this project and 
 |--------------------|-----------------|---------------------------------|
 | 0.1.0              | 6.1.0           | 6.0.0                           |
 | 0.2.0              | 6.2.0           | 6.0.0                           |
-| 0.3.0 (unreleased) | 6.2.0           | 6.0.0                           |
+| 0.3.0 (unreleased) | 6.3.0           | 6.0.0                           |
 
 ## Page template
 

@@ -1,6 +1,6 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Mark Hobson <mark.hobson@activetravelengland.gov.uk>
-Date: Wed, 15 Apr 2026 14:56:12 +0100
+Date: Mon, 14 Sep 2026 15:41:48 +0100
 Subject: [PATCH] Adjust imports for external package
 
 ---
@@ -8,17 +8,17 @@ Subject: [PATCH] Adjust imports for external package
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/ate/components/ate-header/template.njk b/src/ate/components/ate-header/template.njk
-index 49257c9..4a57d61 100644
+index 93d4ebe..c7dff16 100644
 --- a/src/ate/components/ate-header/template.njk
 +++ b/src/ate/components/ate-header/template.njk
 @@ -1,5 +1,5 @@
--{% from "../../macros/attributes.njk" import govukAttributes -%}
+-{% from "../generic-header/macro.njk" import govukGenericHeader -%}
 -{% from "../../macros/logo.njk" import govukLogo -%}
-+{% from "govuk/macros/attributes.njk" import govukAttributes -%}
++{% from "govuk/components/generic-header/macro.njk" import govukGenericHeader -%}
 +{% from "govuk/macros/logo.njk" import govukLogo -%}
  
- <div class="govuk-header {%- if params.classes %} {{ params.classes }}{% endif %}" {{- govukAttributes(params.attributes) }}>
-   <div class="govuk-header__container {{ params.containerClasses | default("govuk-width-container", true) }}">
+ {% set logoContent %}
+   {{ govukLogo({
 -- 
 2.43.0
 
