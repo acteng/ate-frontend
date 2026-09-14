@@ -1,13 +1,18 @@
-.govuk-header__logo {
+@use "pkg:govuk-frontend/base" as govuk-frontend;
+
+.ate-header {
+  background: govuk-frontend.govuk-functional-colour("brand");
+}
+
+.ate-header .govuk-generic-header__logo {
   padding-top: 14px;
   padding-bottom: 16px;
 }
 
-.govuk-header__homepage-link {
+.ate-header .govuk-generic-header__homepage-link {
   .ate-header__logotype,
   .ate-header__logotype--focus {
     height: 30px;
-    vertical-align: top;
   }
 
   .ate-header__logotype--focus {

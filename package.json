@@ -30,7 +30,7 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "ate-frontend:copy-files": "mkdir -p dist/ && cp -rT src/ate/ dist/ate/",
-    "ate-frontend:build-css": "sass --style compressed src/ate/index.scss dist/ate/ate-frontend.min.css",
+    "ate-frontend:build-css": "sass --pkg-importer=node --style compressed src/ate/index.scss dist/ate/ate-frontend.min.css",
     "ate-frontend:build": "npm run ate-frontend:copy-files && npm run ate-frontend:build-css",
     "govuk-frontend:build-css": "sass --pkg-importer=node --style compressed src/govuk-frontend.scss dist/govuk-frontend-ate.min.css",
     "govuk-frontend:build": "npm run govuk-frontend:build-css",

@@ -3,18 +3,10 @@
 {% set logoContent %}
   <img class="ate-header__logotype" src="{{ params.assetPath }}/ate-header/ate-logo-white.png" alt="Active Travel England"/>
   <img class="ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ate-logo-black.png" alt="Active Travel England"/>
-  {%- if (params.productName) %}
-    <span class="govuk-header__product-name">
-      {{- params.productName -}}
-    </span>
-  {% endif -%}
 {% endset %}
 
 {{ govukGenericHeader({
-  _namespace: 'govuk',
   logoHtml: logoContent,
   url: params.homepageUrl | default("//gov.uk", true),
-  containerClasses: params.containerClasses,
-  classes: params.classes,
-  attributes: params.attributes
+  classes: "ate-header"
 }) }}

@@ -23,8 +23,6 @@ Requires [Inkscape](https://inkscape.org/) and [ImageMagick](https://imagemagick
 
 We derive the following templates from GOV.UK Frontend:
 
-* ATE header component - the [crown cannot be changed](https://github.com/alphagov/govuk-frontend/issues/1639) in the
-  GOV.UK header, so we fork the template to replace it with the ATE logo
 * ATE footer component - the [crown cannot be removed](https://github.com/alphagov/govuk-frontend/issues/5952) from the
   GOV.UK footer, so we fork the template to remove it
 

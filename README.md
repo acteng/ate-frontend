@@ -35,8 +35,8 @@ This project provides the following components.
 
 ### ATE header
 
-The ATE header component tell users that they're using an ATE service. It replaces the GOV.UK logo in the GOV.UK header
-with the ATE logo.
+The ATE header component tell users that they're using an ATE service. It sets the logo in the generic header to the ATE
+logo.
 
 ![Screenshot of the ATE header](docs/components/ate-header.png)
 
@@ -48,11 +48,12 @@ Use with the Nunjucks macro:
 {{ ateHeader({}) }}
 ```
 
-The macro supports all the [GOV.UK header](https://design-system.service.gov.uk/components/header/) options, plus:
+The macro supports the following options:
 
-| Name        | Type   | Description                                |
-|-------------|--------|--------------------------------------------|
-| `assetPath` | string | Specify a path to the ATE Frontend assets. |
+| Name          | Type   | Description                                               |
+|---------------|--------|-----------------------------------------------------------|
+| `homepageUrl` | string | The URL of the homepage. Defaults to the GOV.UK homepage. |
+| `assetPath`   | string | Specify a path to the ATE Frontend assets.                |
 
 ### ATE footer
 

@@ -13,12 +13,6 @@ create_template() {
 	git apply ${REPO_DIR}/${PATCH_PATH}
 }
 
-# ATE header component
-create_template \
-	"node_modules/govuk-frontend/dist/govuk/components/header/template.njk" \
-	"src/ate/components/ate-header/template.njk" \
-	"patches/components/ate-header/*.patch"
-
 # ATE footer component
 create_template \
 	"node_modules/govuk-frontend/dist/govuk/components/footer/template.njk" \
