@@ -1,7 +1,13 @@
+.rebranded-one-login-header__logo {
+  padding-top: 13px;
+  padding-bottom: 17px;
+}
+
 .rebranded-one-login-header__link {
   .ate-service-header__logotype,
   .ate-service-header__logotype--focus {
     height: 30px;
+    vertical-align: top;
   }
 
   .ate-service-header__logotype--focus {

@@ -8,7 +8,7 @@ Subject: [PATCH] Replace GOV.UK logo with ATE logo
  1 file changed, 2 insertions(+), 5 deletions(-)
 
 diff --git a/src/ate/components/ate-header/template.njk b/src/ate/components/ate-header/template.njk
-index c7dff16..64606e4 100644
+index c7dff16..d5b6dcf 100644
 --- a/src/ate/components/ate-header/template.njk
 +++ b/src/ate/components/ate-header/template.njk
 @@ -1,11 +1,8 @@
@@ -20,8 +20,8 @@ index c7dff16..64606e4 100644
 -    classes: "govuk-header__logotype",
 -    ariaLabelText: "GOV.UK"
 -  }) | trim | indent(8) }}
-+  <img class="govuk-header__logotype ate-header__logotype" src="{{ params.assetPath }}/ate-header/ate-logo-white.png" alt="Active Travel England"/>
-+  <img class="govuk-header__logotype ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ate-logo-black.png" alt="Active Travel England"/>
++  <img class="ate-header__logotype" src="{{ params.assetPath }}/ate-header/ate-logo-white.png" alt="Active Travel England"/>
++  <img class="ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ate-logo-black.png" alt="Active Travel England"/>
    {%- if (params.productName) %}
      <span class="govuk-header__product-name">
        {{- params.productName -}}

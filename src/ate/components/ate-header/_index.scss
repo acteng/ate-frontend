@@ -1,7 +1,13 @@
+.govuk-header__logo {
+  padding-top: 13px;
+  padding-bottom: 17px;
+}
+
 .govuk-header__homepage-link {
   .ate-header__logotype,
   .ate-header__logotype--focus {
     height: 30px;
+    vertical-align: top;
   }
 
   .ate-header__logotype--focus {

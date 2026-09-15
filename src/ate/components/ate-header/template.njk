@@ -1,8 +1,8 @@
 {% from "govuk/components/generic-header/macro.njk" import govukGenericHeader -%}
 
 {% set logoContent %}
-  <img class="govuk-header__logotype ate-header__logotype" src="{{ params.assetPath }}/ate-header/ate-logo-white.png" alt="Active Travel England"/>
-  <img class="govuk-header__logotype ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ate-logo-black.png" alt="Active Travel England"/>
+  <img class="ate-header__logotype" src="{{ params.assetPath }}/ate-header/ate-logo-white.png" alt="Active Travel England"/>
+  <img class="ate-header__logotype--focus" src="{{ params.assetPath }}/ate-header/ate-logo-black.png" alt="Active Travel England"/>
   {%- if (params.productName) %}
     <span class="govuk-header__product-name">
       {{- params.productName -}}
