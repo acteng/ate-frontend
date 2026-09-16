@@ -175,19 +175,20 @@ Add the CSS files to your pages:
 Alternatively, import the styles to build them yourself:
 
 ```scss
-// ATE Frontend styles
-@use "pkg:@active-travel-england/ate-frontend";
+// ATE Frontend settings
+@use "pkg:@active-travel-england/ate-frontend/settings";
 
 // GOV.UK Frontend styles with ATE branding
 @use "pkg:govuk-frontend" with (
-  $govuk-font-family: ate-frontend.$ate-font-family,
-  $govuk-functional-colours: ate-frontend.$ate-functional-colours
+  $govuk-font-family: settings.$ate-font-family,
+  $govuk-functional-colours: settings.$ate-functional-colours
 );
 
 // GOV.UK One Login service header styles with ATE branding
-$govuk-font-family: ate-frontend.$ate-font-family;
-$govuk-functional-colours: ate-frontend.$ate-functional-colours;
-@import "service-header";
+@use "service-header";
+
+// ATE Frontend styles
+@use "pkg:@active-travel-england/ate-frontend";
 ```
 
 Build the CSS using the [Node.js pkg: importer](https://sass-lang.com/documentation/cli/dart-sass/#pkg-importer-node)
