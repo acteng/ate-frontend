@@ -232,10 +232,12 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
    for ATE branding by creating `app/assets/sass/settings.scss`:
 
    ```scss
+   // ATE Frontend settings
+   @use "node_modules/@active-travel-england/ate-frontend/dist/ate/settings";
+   
    // Configure GOV.UK Frontend for ATE branding
-   @use "node_modules/@active-travel-england/ate-frontend/dist/ate/settings" as ate-frontend;
-   $govuk-font-family: ate-frontend.$ate-font-family;
-   $govuk-functional-colours: ate-frontend.$ate-functional-colours;
+   $govuk-font-family: settings.$ate-font-family;
+   $govuk-functional-colours: settings.$ate-functional-colours;
    ```
 
 1. Change the default layout `app/views/layouts/main.html` to use the ATE branding:
