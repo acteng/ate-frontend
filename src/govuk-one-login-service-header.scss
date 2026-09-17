@@ -1,7 +1,11 @@
 // ATE Frontend settings
 @use "ate/settings";
 
+// Configure GOV.UK Frontend for ATE branding
+@use "pkg:govuk-frontend/base" with (
+  $govuk-font-family: settings.$ate-font-family,
+  $govuk-functional-colours: settings.$ate-functional-colours
+);
+
 // GOV.UK One Login service header styles with ATE branding
-$govuk-font-family: settings.$ate-font-family;
-$govuk-functional-colours: settings.$ate-functional-colours;
-@import "service-header";
+@use "service-header";
