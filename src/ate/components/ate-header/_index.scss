@@ -1,7 +1,7 @@
-@use "pkg:govuk-frontend/base" as govuk-frontend;
+@use "pkg:govuk-frontend/base";
 
 .ate-header {
-  background: govuk-frontend.govuk-functional-colour("brand");
+  background: base.govuk-functional-colour("brand");
 }
 
 .ate-header .govuk-generic-header__logo {
