@@ -229,6 +229,17 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
    npm install @govuk-one-login/service-header
    ```
 
+1. Configure the plugin order for the correct precedence of styles by adding the following to `app/config.json`:
+
+   ```json
+   "basePlugins": [
+     "govuk-prototype-kit",
+     "govuk-frontend",
+     "@govuk-one-login/service-header",
+     "@active-travel-england/ate-frontend"
+   ]
+   ```
+
 1. Configure the [GOV.UK Frontend settings](https://frontend.design-system.service.gov.uk/sass-api-reference/#settings)
    for ATE branding by creating `app/assets/sass/settings.scss`:
 
