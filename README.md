@@ -245,7 +245,7 @@ This project can also be used as a plugin for the [GOV.UK Prototype Kit](https:/
 
    ```scss
    // ATE Frontend settings
-   @use "node_modules/@active-travel-england/ate-frontend/dist/ate/settings";
+   @use "pkg:@active-travel-england/ate-frontend/settings";
    
    // Configure GOV.UK Frontend for ATE branding
    $govuk-font-family: settings.$ate-font-family;
